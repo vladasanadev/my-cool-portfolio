@@ -96,18 +96,34 @@
 	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
 	    responsive:{
 	      0:{
-	        items:1
+	        items:1,
+			touchDrag: false, // Disable touch dragging on mobile
+      		mouseDrag: false // Disable mouse dragging on mobile
 	      },
 	      600:{
-	        items:1
+	        items:1,
+			touchDrag: false, // Disable touch dragging on mobile
+      		mouseDrag: false // Disable mouse dragging on mobile
 	      },
 	      1000:{
-	        items:1
+	        items:1,
+
 	      }
 	    }
 		});
 	};
 	carousel();
+	//TODO TAKE A LOOK AT THIS SOLUTION LATER
+	// $('.home-slider').on('touchstart', function(e) {
+	// 	var startY = e.originalEvent.touches[0].pageY;
+	// 	$(this).on('touchmove', function(e) {
+	// 	  var moveY = e.originalEvent.touches[0].pageY;
+	// 	  if(Math.abs(startY - moveY) > 10) { // Small threshold to detect vertical scroll
+	// 		$(this).off('touchmove'); // Prevent Owl from handling the touch move event
+	// 		window.scrollBy(0, startY - moveY); // Scroll the page
+	// 	  }
+	// 	});
+	//   });
 
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
